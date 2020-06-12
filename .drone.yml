@@ -13,6 +13,18 @@ steps:
       event:
         - push
 
+  - name: build
+    image: iknpx/archnode
+    environment:
+      NODE_ENV: production
+    commands:
+      - yarn dist
+    when:
+      branch:
+        - master
+      event:
+        - push
+
   - name: deploy
     image: iknpx/archnode
     environment:
