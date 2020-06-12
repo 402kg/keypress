@@ -1,0 +1,9 @@
+*sublime*
+.DS_Store
+.idea
+
+*.log
+*.snap
+
+dist
+node_modules
