@@ -31,7 +31,7 @@ steps:
       ROOT_KEY:
         from_secret: root_key
     commands:
-      - gulp deploy
+      - yarn deploy
     when:
       branch:
         - master
