@@ -1,0 +1,27 @@
+---
+kind: pipeline
+name: ci
+
+steps:
+  - name: install
+    image: iknpx/archnode
+    commands:
+      - yarn --silent
+    when:
+      branch:
+        - master
+      event:
+        - push
+
+  - name: deploy
+    image: iknpx/archnode
+    environment:
+      ROOT_KEY:
+        from_secret: root_key
+    commands:
+      - yarn deploy
+    when:
+      branch:
+        - master
+      event:
+        - push
