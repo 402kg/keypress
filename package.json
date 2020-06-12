@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dist": "webpack --progress --config ./webpack.js",
+    "deploy": "gulp deploy",
     "lint": "eslint .",
     "start": "webpack-dev-server --host 0.0.0.0 --config ./webpack.js"
   },
